@@ -42,7 +42,7 @@ let POST = async (req: DemoRequest, res: Response, next: NextFunction) => {
     let users = await modul.POST(req.body);
     if (!users) next(new BedRequestError('passwor or full_name unieq'));
     delete users.password;
-
+    
     return res.status(200).send({
       status: 201,
       message: 'ok',

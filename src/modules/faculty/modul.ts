@@ -11,21 +11,21 @@ let FIRSTBLOCK = async () => {
   return science
 }
 
-let SECONDBLOCK = async (id:string) => {
-  let science = await fetchAll(query.SECONDBLOCK as ``,[id]);
-  
+let SECONDBLOCK = async (id: string) => {
+  let science = await fetchAll(query.SECONDBLOCK as ``, [id]);
+
   return science
 }
 
-let FORINSTITUTE = async (id:string) => {
-  let faculty = await fetchAll(query.FORINSTITUTE as ``,[id]);
-  
+let FORINSTITUTE = async (id: string) => {
+  let faculty = await fetchAll(query.FORINSTITUTE as ``, [id]);
+
   return faculty
 }
 
-let BYID = async (id:string) => {
-  let faculty = await fetch(query.BYID as ``,[id]);
-  
+let BYID = async (id: string) => {
+  let faculty = await fetch(query.BYID as ``, [id]);
+
   return faculty
 }
 

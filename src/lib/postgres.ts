@@ -14,9 +14,7 @@ async function fetchAll(SQL: ``, params: string[] = []) {
 
   const client = await pool.connect();
   try {
-
     const { rows } = await client.query(SQL, params);
-
     return rows
   } catch (error) {
     console.log(error);
