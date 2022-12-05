@@ -1,13 +1,10 @@
-
 import { BedRequestError } from './../../lib/error';
 import { NextFunction, Request, Response } from "express";
 import modul from "./modul";
+import { DemoRequest } from "../../middleweire/cheekToken"
 import { InternalServerError } from "../../lib/error";
 
 
-export interface DemoRequest extends Request {
-  user_id?: string
-}
 
 
 let GET = async (req: DemoRequest, res: Response, next: NextFunction) => {

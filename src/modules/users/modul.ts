@@ -1,16 +1,9 @@
 import sha256 from "sha256";
 import query from "./query";
 import { fetch, fetchAll } from "../../lib/postgres"
+import { userPost } from "./controller"
 
 
-interface userPost {
-  full_name: string,
-  tell_number: string,
-  user_name: string,
-  region: string,
-  password: string,
-  gander: string
-}
 
 interface userLogin {
   user_name: string,

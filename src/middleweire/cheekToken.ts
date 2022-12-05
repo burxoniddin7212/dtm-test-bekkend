@@ -4,7 +4,7 @@ import JWT from "jsonwebtoken";
 
 import { ForbiddineError } from "../lib/error";
 
-interface DemoRequest extends Request {
+export interface DemoRequest extends Request {
   user_id?: string
 }
 
