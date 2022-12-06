@@ -1,9 +1,8 @@
 import { BedRequestError } from './../../lib/error';
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, Response } from "express";
 import modul from "./modul";
 import { DemoRequest } from "../../middleweire/cheekToken"
 import { InternalServerError } from "../../lib/error";
-
 
 
 let FIRSTBLOCK = async (req: DemoRequest, res: Response, next: NextFunction) => {
@@ -15,7 +14,6 @@ let FIRSTBLOCK = async (req: DemoRequest, res: Response, next: NextFunction) => 
       data: science
     })
   } catch (error) {
-    console.log(error);
     next(new InternalServerError('internal error'))
   }
 }
@@ -32,7 +30,6 @@ let SECONDBLOCK = async (req: DemoRequest, res: Response, next: NextFunction) =>
       data: science
     })
   } catch (error) {
-    console.log(error);
     next(new InternalServerError('internal error'))
   }
 }
@@ -49,7 +46,6 @@ let FORINSTITUTE = async (req: DemoRequest, res: Response, next: NextFunction) =
       data: faculty
     })
   } catch (error) {
-    console.log(error);
     next(new InternalServerError('internal error'))
   }
 }
@@ -66,7 +62,6 @@ let BYID = async (req: DemoRequest, res: Response, next: NextFunction) => {
       data: faculty
     })
   } catch (error) {
-    console.log(error);
     next(new InternalServerError('internal error'))
   }
 }

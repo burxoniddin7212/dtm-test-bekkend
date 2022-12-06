@@ -1,9 +1,5 @@
 
 
-let CALCULATERESULT = `
-  
-`;
-
 let GETTESTS = `
 select
   t.test_id,
@@ -46,7 +42,6 @@ from
 
 
 export default {
-  CALCULATERESULT,
   GETTESTS,
   RESULTS,
   FACINS

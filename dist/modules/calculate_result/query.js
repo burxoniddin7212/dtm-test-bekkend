@@ -1,8 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let CALCULATERESULT = `
-  
-`;
 let GETTESTS = `
 select
   t.test_id,
@@ -41,7 +38,6 @@ from
         f.institute_id=i.institute_id  
 `;
 exports.default = {
-    CALCULATERESULT,
     GETTESTS,
     RESULTS,
     FACINS

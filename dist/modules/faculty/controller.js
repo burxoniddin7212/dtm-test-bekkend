@@ -25,7 +25,6 @@ let FIRSTBLOCK = (req, res, next) => __awaiter(void 0, void 0, void 0, function*
         });
     }
     catch (error) {
-        console.log(error);
         next(new error_2.InternalServerError('internal error'));
     }
 });
@@ -42,7 +41,6 @@ let SECONDBLOCK = (req, res, next) => __awaiter(void 0, void 0, void 0, function
         });
     }
     catch (error) {
-        console.log(error);
         next(new error_2.InternalServerError('internal error'));
     }
 });
@@ -59,7 +57,6 @@ let FORINSTITUTE = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
         });
     }
     catch (error) {
-        console.log(error);
         next(new error_2.InternalServerError('internal error'));
     }
 });
@@ -76,7 +73,6 @@ let BYID = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
         });
     }
     catch (error) {
-        console.log(error);
         next(new error_2.InternalServerError('internal error'));
     }
 });

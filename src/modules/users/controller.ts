@@ -1,5 +1,5 @@
 import { BedRequestError } from './../../lib/error';
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, Response } from "express";
 import modul from "./modul";
 import { InternalServerError } from "../../lib/error"
 import { DemoRequest } from "../../middleweire/cheekToken"
@@ -21,7 +21,6 @@ let GET = async (req: DemoRequest, res: Response, next: NextFunction) => {
     users?.forEach(data => {
       delete data.password;
     });
-
     return res.status(200).send({
       status: 200,
       message: 'ok',
@@ -32,13 +31,11 @@ let GET = async (req: DemoRequest, res: Response, next: NextFunction) => {
   }
 }
 
-
 let POST = async (req: DemoRequest, res: Response, next: NextFunction) => {
   try {
     let users = await modul.POST(req.body);
     if (!users) next(new BedRequestError('passwor or full_name unieq'));
     delete users.password;
-
     return res.status(200).send({
       status: 201,
       message: 'ok',
@@ -50,16 +47,12 @@ let POST = async (req: DemoRequest, res: Response, next: NextFunction) => {
   }
 }
 
-
 let LOGIN = async (req: DemoRequest, res: Response, next: NextFunction) => {
   try {
     let user = await modul.LOGIN(req.body);
-
     if (!user) next(new BedRequestError('not found'))
-
     if (user) {
       delete user?.password;
-
       return res.status(200).send({
         status: 201,
         message: 'ok',
@@ -71,9 +64,6 @@ let LOGIN = async (req: DemoRequest, res: Response, next: NextFunction) => {
     next(new InternalServerError('internal error'))
   }
 }
-
-
-
 
 
 export default {

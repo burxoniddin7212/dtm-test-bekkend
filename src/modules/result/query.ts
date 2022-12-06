@@ -1,5 +1,3 @@
-
-
 let GETBUDJET = `
 select 
 *
@@ -53,8 +51,6 @@ result
   where
     user_id=$1
 `;
-
-
 
 
 export default {

@@ -1,5 +1,5 @@
 import { validation } from './middleweire/joiValidation';
-import express, { Request, Response, ErrorRequestHandler, NextFunction, Express } from 'express';
+import express, { Express } from 'express';
 import cors from "cors";
 import { PORT } from './config';
 import { heandler } from "./lib/errorHeandler";
@@ -21,7 +21,6 @@ app.use(instituteRouter);
 app.use(testsRouter);
 app.use(calculateResultRouter);
 app.use(resultRouter);
-
 
 app.use(heandler);
 

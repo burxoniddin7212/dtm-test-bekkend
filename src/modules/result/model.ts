@@ -1,7 +1,6 @@
 import query from "./query";
 import { fetch, fetchAll } from "../../lib/postgres";
 
-
 interface InsertResult {
   user_id: string,
   institue_id: string,
@@ -44,18 +43,13 @@ let GETRESULT = async () => {
   result?.sort(function (x, y) {
     return x.total_score - y.total_score;
   });
-
   return result?.reverse()
 }
 
 let GETRESULTBYID = async (user_id: string) => {
   let result = await fetchAll(query.GETRESULTBYID as ``, [user_id]);
-
   return result?.reverse()
 }
-
-
-
 
 
 export default {

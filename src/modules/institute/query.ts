@@ -16,7 +16,6 @@ from
 `;
 
 
-
 export default {
   GET
 }

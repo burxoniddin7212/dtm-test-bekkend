@@ -1,5 +1,3 @@
-
-
 let GETTESTS = `
 select
 json_agg(
@@ -15,8 +13,6 @@ faculty as f
       )
   group by t.science_id
 `;
-
-
 
 
 export default {

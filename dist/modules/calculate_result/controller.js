@@ -24,7 +24,6 @@ let CALCULATERESULT = (req, res, next) => __awaiter(void 0, void 0, void 0, func
         });
     }
     catch (error) {
-        console.log(error);
         next(new error_1.InternalServerError('internal error'));
     }
 });

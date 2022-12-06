@@ -41,9 +41,6 @@ where faculty_id=$1
 `;
 
 
-
-
-
 export default {
   FIRSTBLOCK,
   SECONDBLOCK,

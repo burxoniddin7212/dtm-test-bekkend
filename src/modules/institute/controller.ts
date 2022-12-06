@@ -1,10 +1,7 @@
-import { BedRequestError } from './../../lib/error';
 import { NextFunction, Request, Response } from "express";
 import modul from "./modul";
 import { DemoRequest } from "../../middleweire/cheekToken"
 import { InternalServerError } from "../../lib/error";
-
-
 
 
 let GET = async (req: DemoRequest, res: Response, next: NextFunction) => {
@@ -16,7 +13,6 @@ let GET = async (req: DemoRequest, res: Response, next: NextFunction) => {
       data: institute
     })
   } catch (error) {
-    console.log(error);
     next(new InternalServerError('internal error'))
   }
 }

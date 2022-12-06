@@ -24,7 +24,6 @@ let GET = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
         });
     }
     catch (error) {
-        console.log(error);
         next(new error_1.InternalServerError('internal error'));
     }
 });

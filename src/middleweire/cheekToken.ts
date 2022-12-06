@@ -1,7 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "../lib/jwt";
 import JWT from "jsonwebtoken";
-
 import { ForbiddineError } from "../lib/error";
 
 export interface DemoRequest extends Request {

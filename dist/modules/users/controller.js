@@ -29,7 +29,6 @@ let GET = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
         });
     }
     catch (error) {
-        console.log(error);
         next(new error_2.InternalServerError('internal error'));
     }
 });
@@ -47,14 +46,12 @@ let POST = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
         });
     }
     catch (error) {
-        console.log(error);
         next(new error_2.InternalServerError('internal error'));
     }
 });
 let LOGIN = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         let user = yield modul_1.default.LOGIN(req.body);
-        console.log(user);
         if (!user)
             next(new error_1.BedRequestError('not found'));
         if (user) {
@@ -68,7 +65,6 @@ let LOGIN = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
         }
     }
     catch (error) {
-        console.log(error);
         next(new error_2.InternalServerError('internal error'));
     }
 });

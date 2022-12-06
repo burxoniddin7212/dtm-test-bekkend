@@ -24,7 +24,6 @@ let GETRESULT = (req, res, next) => __awaiter(void 0, void 0, void 0, function* 
         });
     }
     catch (error) {
-        console.log(error);
         next(new error_1.InternalServerError('internal error'));
     }
 });
@@ -38,7 +37,6 @@ let GETRESULTBYID = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
         });
     }
     catch (error) {
-        console.log(error);
         next(new error_1.InternalServerError('internal error'));
     }
 });

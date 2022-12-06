@@ -1,8 +1,7 @@
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, Response } from "express";
 import modul from "./modul";
 import { InternalServerError } from "../../lib/error";
 import { DemoRequest } from "../../middleweire/cheekToken"
-
 
 
 let CALCULATERESULT = async (req: DemoRequest, res: Response, next: NextFunction) => {
